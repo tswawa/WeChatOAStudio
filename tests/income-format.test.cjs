@@ -1,0 +1,16 @@
+const { test } = require('node:test')
+const assert = require('node:assert/strict')
+
+test('financial display formats cents exactly, including zero, negative cents and the largest safe integer', async () => {
+  const { formatIncomeMetric } = await import('../src/utils/money.js')
+  const format = value => formatIncomeMetric({ value, unit: 'CNY' })
+  assert.match(format(12345), /123\.45$/)
+  assert.match(format(0), /0\.00$/)
+  assert.match(format(-1), /^-.*0\.01$/)
+  assert.match(format(Number.MAX_SAFE_INTEGER), /90,071,992,547,409\.91$/)
+  assert.equal(format(undefined), '--')
+  assert.equal(format(null), '--')
+  assert.equal(format(NaN), '--')
+  assert.equal(formatIncomeMetric({ value: 123, unit: 'WECOIN' }), '123 微信豆')
+  assert.equal(formatIncomeMetric({ value: 4, unit: 'ARTICLE' }), '4 篇')
+})

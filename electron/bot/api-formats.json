@@ -1,0 +1,6 @@
+[
+  { "id": "chat-completions", "label": "OpenAI Compatible · Chat Completions", "baseUrl": "https://api.openai.com/v1" },
+  { "id": "responses", "label": "OpenAI · Responses", "baseUrl": "https://api.openai.com/v1" },
+  { "id": "anthropic", "label": "Anthropic · Messages", "baseUrl": "https://api.anthropic.com" },
+  { "id": "gemini", "label": "Google Gemini · GenerateContent", "baseUrl": "https://generativelanguage.googleapis.com" }
+]

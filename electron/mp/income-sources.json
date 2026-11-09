@@ -1,0 +1,5 @@
+[
+  { "id": "ads", "name": "流量主收入", "path": "/promotion/publisher/publisher_index" },
+  { "id": "paid", "name": "付费阅读", "path": "/merchant/mppaysubscribe?action=getlatestpay" },
+  { "id": "reward", "name": "文章赞赏", "path": "/merchant/reward?action=getlatestreward" }
+]

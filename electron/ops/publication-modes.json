@@ -1,0 +1,5 @@
+[
+  { "id": "confirm", "label": "保留草稿，发表前确认" },
+  { "id": "publish", "label": "自动发表，不群发通知" },
+  { "id": "mass", "label": "自动发表并群发通知" }
+]

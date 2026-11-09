@@ -1,0 +1,10 @@
+[
+  { "id": "bing", "name": "Bing", "webOrigin": "https://www.bing.com", "webPath": "/search", "webQuery": "q", "imageOrigin": "https://www.bing.com", "imagePath": "/images/search", "imageQuery": "q" },
+  { "id": "google", "name": "Google", "webOrigin": "https://www.google.com", "webPath": "/search", "webQuery": "q", "imageOrigin": "https://www.google.com", "imagePath": "/search", "imageQuery": "q" },
+  { "id": "baidu", "name": "百度", "webOrigin": "https://www.baidu.com", "webPath": "/s", "webQuery": "wd", "imageOrigin": "https://image.baidu.com", "imagePath": "/search/acjson", "imageQuery": "word" },
+  { "id": "duckduckgo", "name": "DuckDuckGo", "webOrigin": "https://html.duckduckgo.com", "webPath": "/html/", "webQuery": "q", "imageOrigin": "https://duckduckgo.com", "imagePath": "/", "imageQuery": "q" },
+  { "id": "sogou", "name": "搜狗", "webOrigin": "https://www.sogou.com", "webPath": "/web", "webQuery": "query", "imageOrigin": "https://pic.sogou.com", "imagePath": "/napi/pc/searchList", "imageQuery": "query" },
+  { "id": "so360", "name": "360 搜索", "webOrigin": "https://www.so.com", "webPath": "/s", "webQuery": "q", "imageOrigin": "https://image.so.com", "imagePath": "/j", "imageQuery": "q" },
+  { "id": "yahoo", "name": "Yahoo", "webOrigin": "https://search.yahoo.com", "webPath": "/search", "webQuery": "p", "imageOrigin": "https://images.search.yahoo.com", "imagePath": "/search/images", "imageQuery": "p" },
+  { "id": "yandex", "name": "Yandex", "webOrigin": "https://yandex.com", "webPath": "/search/", "webQuery": "text", "imageOrigin": "https://yandex.com", "imagePath": "/images/search", "imageQuery": "text" }
+]

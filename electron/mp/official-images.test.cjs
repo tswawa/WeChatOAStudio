@@ -1,0 +1,16 @@
+const {test}=require('node:test'),assert=require('node:assert/strict'),sharp=require('sharp')
+const {createOfficialImageReader}=require('./official-images.cjs')
+test('official material input uses actual WebP bytes and the shared validated network before API upload',async()=>{
+  const bytes=await sharp({create:{width:480,height:320,channels:4,background:'#57a4d0'}}).webp().toBuffer()
+  let fetched=0;const reader=createOfficialImageReader({network:{fetchBytes:async(url,options)=>{fetched++;assert.equal(url,'https://mmbiz.qpic.cn/image.png');assert.equal(options.maxBytes,8*1024*1024);return {bytes,type:'image/webp'}}}})
+  const image=await reader('a',{url:'https://mmbiz.qpic.cn/image.png'})
+  assert.equal(fetched,1);assert.equal(image.mimeType,'image/png');assert.equal((await sharp(image.buffer).metadata()).format,'png')
+  await assert.rejects(reader('a',{url:'https://untrusted.example.com/image.png'}),/素材库/);assert.equal(fetched,1)
+})
+test('oversized opaque media is compressed within the actual official API upload limit',async()=>{
+  const pixels=require('node:crypto').randomBytes(1200*1200*3),bytes=await sharp(pixels,{raw:{width:1200,height:1200,channels:3}}).png().toBuffer()
+  assert.ok(bytes.length>2*1024*1024)
+  const reader=createOfficialImageReader({network:{fetchBytes:async()=>({bytes,type:'image/png'})}})
+  const image=await reader('a',{url:'https://mmbiz.qpic.cn/image.png'})
+  assert.ok(image.buffer.length<=2*1024*1024);assert.equal(image.mimeType,'image/jpeg')
+})

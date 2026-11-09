@@ -1,0 +1,19 @@
+* text=auto
+*.js text eol=lf
+*.cjs text eol=lf
+*.vue text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary
+*.exe binary
+*.zip binary
+
+# Preserve upstream license text exactly.
+docs/third-party-licenses/** -text -whitespace

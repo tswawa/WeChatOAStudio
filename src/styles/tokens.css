@@ -1,0 +1,28 @@
+/* 设计变量：颜色、尺寸、圆角，沿用微信公众平台与 WeUI 的视觉 */
+:root {
+  --brand: #07c160;
+  --brand-hover: #06ad56;
+  --brand-light: #e8f8ef;
+  --link: #576b95;
+  --danger: #fa5151;
+  --danger-light: #fff0f0;
+  --warning: #fa9d3b;
+  --warning-light: #fff6eb;
+  --info: #2b7de9;
+  --info-light: #eef5ff;
+  --text-1: rgba(0, 0, 0, 0.9);
+  --text-2: rgba(0, 0, 0, 0.55);
+  --text-3: rgba(0, 0, 0, 0.35);
+  --border: #e7e7eb;
+  --border-light: #f0f0f2;
+  --bg-page: #f4f5f7;
+  --bg-card: #ffffff;
+  --bg-hover: #f7f7f8;
+  --bubble-user: #95ec69;
+  --radius: 6px;
+  --radius-lg: 8px;
+  --header-h: 60px;
+  --nav-w: 208px;
+  --shadow-pop: 0 6px 24px rgba(0, 0, 0, 0.12);
+  --font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+}

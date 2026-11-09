@@ -1,0 +1,235 @@
+/* 全局基础：重置、排版，以及 WeUI 组件在桌面端的尺寸与通用页面骨架 */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-1);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  height: 100%;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/* WeUI 按钮：移动端默认尺寸改为桌面后台尺寸 */
+.weui-btn.weui-btn_mini,
+.weui-btn.weui-btn_xmini {
+  margin: 0;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.weui-btn.weui-btn_mini {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.weui-btn.weui-btn_xmini {
+  height: 26px;
+  padding: 0 10px;
+  font-size: 13px;
+  line-height: 26px;
+}
+
+.weui-btn.weui-btn_mini + .weui-btn.weui-btn_mini,
+.weui-btn.weui-btn_xmini + .weui-btn.weui-btn_xmini,
+.weui-btn + .weui-btn {
+  /* WeUI 给相邻按钮加了上边距；这里清掉，按钮间距统一由父容器的 gap 控制 */
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.weui-btn_default.weui-btn_outline {
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.weui-btn_disabled {
+  cursor: not-allowed;
+}
+
+.weui-switch {
+  cursor: pointer;
+  flex: none;
+}
+
+/* WeUI 弹窗：桌面端改为固定宽度居中 */
+.weui-dialog.desk-dialog {
+  left: 50%;
+  right: auto;
+  width: 480px;
+  max-width: calc(100vw - 48px);
+  max-height: calc(100vh - 48px);
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.weui-dialog.desk-dialog .weui-dialog__bd {
+  flex: 1;
+  min-height: 0;
+  margin-bottom: 0;
+  overflow-y: auto;
+  text-align: left;
+}
+
+/* 通用页面骨架：标题栏、卡片、表格、空状态、文字色 */
+.page {
+  width: 100%;
+  padding: 24px 32px 40px;
+  min-width: 0;
+}
+
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.page-desc {
+  margin-top: 4px;
+  color: var(--text-2);
+  font-size: 13px;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.card + .card {
+  margin-top: 16px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.row-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 400;
+  color: var(--text-2);
+  background: var(--bg-hover);
+}
+
+.table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+.muted {
+  color: var(--text-2);
+}
+
+.faint {
+  color: var(--text-3);
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.text-brand {
+  color: var(--brand);
+}
+
+.empty {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--text-3);
+}
+
+.icon-16 {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+.icon-20 {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+@container workspace (max-width: 760px) {
+  .page {
+    padding: 20px 20px 32px;
+  }
+
+  .page-head {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    padding: 18px 20px;
+  }
+}

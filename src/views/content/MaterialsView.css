@@ -1,0 +1,132 @@
+/* Material gallery layout, deletion feedback and transitions. */
+.head-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.tabs button {
+  padding: 0 0 10px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  font: inherit;
+  color: var(--text-2);
+  cursor: pointer;
+}
+
+.tabs button.on {
+  color: var(--brand);
+  border-bottom-color: var(--brand);
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(190px, 100%), 1fr));
+  gap: 20px;
+}
+
+.item {
+  min-width: 0;
+  margin: 0;
+  transition: opacity 180ms ease;
+}
+
+.item :deep(.cover) {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 3 / 2;
+  font-size: 16px !important;
+}
+
+.item.deleting {
+  opacity: 0.55;
+}
+
+figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.size {
+  font-size: 12px;
+}
+
+.delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  width: 72px;
+  height: 28px;
+  flex: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--danger);
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.delete-button:disabled {
+  cursor: progress;
+}
+
+.delete-spinner {
+  animation: delete-spin 800ms linear infinite;
+}
+
+.material-move,
+.material-enter-active,
+.material-leave-active {
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.material-enter-from,
+.material-leave-to {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+.material-leave-active {
+  position: absolute;
+}
+
+@keyframes delete-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item,
+  .material-move,
+  .material-enter-active,
+  .material-leave-active {
+    transition: none;
+  }
+
+  .delete-spinner {
+    animation-duration: 1600ms;
+  }
+}

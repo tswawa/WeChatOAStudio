@@ -1,0 +1,58 @@
+# Dependencies and generated output
+node_modules/
+dist/
+release/
+release-assets/
+artifacts/
+audit/
+backups/
+coverage/
+*.tsbuildinfo
+*.map
+
+# Local application data
+ArticleImages/
+BotAttachments/
+Partitions/
+logs/
+Crashpad/
+*.log
+*.dmp
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+settings.json
+mp-logins.json
+official-api.json
+official-publications.json
+Local State
+Cookies
+Cookies-journal
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.pfx
+*.p12
+*.keystore
+
+# Packages belong in GitHub Releases
+*.exe
+*.msi
+*.zip
+*.7z
+*.blockmap
+
+# Local tools and editor output
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
