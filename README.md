@@ -4,7 +4,17 @@ AI 驱动的微信公众号内容自动化工作台。Bot 可以自行上网搜�
 
 项目面向公众号作者和运营人员，把资料采集、写作、配图、排版和发表串成一个连续任务。可以直接交代主题、篇幅与发送要求，也可以设定每天或每周执行的任务，让 AI 按账号的写作规则和长期偏好处理。同时提供多账号、草稿、互动与数据管理。
 
-[![License: GPL-3.0-only](https://img.shields.io/badge/license-GPL--3.0--only-blue.svg)](LICENSE)
+[![最新版本](https://img.shields.io/github/v/release/tswawa/WeChatOAStudio?style=flat&logo=github&label=release)](https://github.com/tswawa/WeChatOAStudio/releases/latest)
+[![Release 累计下载量](https://img.shields.io/github/downloads/tswawa/WeChatOAStudio/total?style=flat&logo=github&label=downloads)](https://github.com/tswawa/WeChatOAStudio/releases)
+[![GitHub Stars](https://img.shields.io/github/stars/tswawa/WeChatOAStudio?style=flat&logo=github)](https://github.com/tswawa/WeChatOAStudio/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/tswawa/WeChatOAStudio?style=flat&logo=github)](https://github.com/tswawa/WeChatOAStudio/forks)
+[![GitHub Issues](https://img.shields.io/github/issues/tswawa/WeChatOAStudio?style=flat&logo=github)](https://github.com/tswawa/WeChatOAStudio/issues)
+[![License: GPL-3.0-only](https://img.shields.io/badge/license-GPL--3.0--only-blue?style=flat)](LICENSE)
+
+[![Windows x64](https://img.shields.io/badge/platform-Windows%20x64-0078D4?style=flat)](#安装)
+[![Electron 45.2.1](https://img.shields.io/badge/Electron-45.2.1-47848F?style=flat&logo=electron&logoColor=white)](https://www.electronjs.org/)
+[![Vue 3](https://img.shields.io/badge/Vue-3-4FC08D?style=flat&logo=vuedotjs&logoColor=white)](https://vuejs.org/)
+[![Node.js 24](https://img.shields.io/badge/Node.js-24-339933?style=flat&logo=nodedotjs&logoColor=white)](#开发与文档)
 
 [功能介绍](#功能介绍) · [下载安装](#安装) · [首次使用](#首次使用) · [更新与备份](#更新与备份) · [开发与文档](#开发与文档) · [交流与建议](#交流与建议)
 
