@@ -252,6 +252,9 @@ docs/         截图、发布与安全说明
 ## 交流与建议
 
 使用问题或改进建议请提交 [Issues](https://github.com/tswawa/WeChatOAStudio/issues)。描述复现步骤、应用版本和 Windows 版本，附图前请遮住账号资料、二维码和凭据。
+交流学习请进
+<img width="526" height="658" alt="image" src="https://github.com/user-attachments/assets/a4f11fe6-97a9-46d1-ba9f-a7d49932573f" />
+
 
 ## 许可证
 
